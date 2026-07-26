@@ -1,0 +1,360 @@
+.page {
+  width: min(100%, 1420px);
+  margin: 0 auto;
+  padding: 48px 30px 72px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.pageHeader > div:first-child {
+  max-width: 850px;
+}
+
+.pageHeader p,
+.originalPanel header span,
+.primaryFields label > span,
+.listGrid label > span,
+.tagsField > span {
+  margin: 0 0 10px;
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pageHeader p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pageHeader p span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tr-signal);
+  box-shadow: 0 0 0 4px var(--tr-signal-wash);
+}
+
+.pageHeader h1 {
+  margin: 0;
+  color: var(--tr-ink);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 560;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.pageHeader > div:first-child > span {
+  display: block;
+  margin-top: 14px;
+  color: var(--tr-ink-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.traceStamp {
+  display: flex;
+  min-width: 150px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--tr-line);
+  border-radius: var(--tr-radius-md);
+  background: var(--tr-surface);
+  color: var(--tr-signal-deep);
+}
+
+.traceStamp span {
+  display: flex;
+  flex-direction: column;
+  color: var(--tr-ink-subtle);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.traceStamp strong {
+  color: var(--tr-ink);
+  font-size: 16px;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.8fr);
+  overflow: hidden;
+  border: 1px solid var(--tr-line-strong);
+  border-radius: var(--tr-radius-lg);
+  background: var(--tr-surface);
+}
+
+.originalPanel {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 28px;
+  background: var(--tr-graphite);
+  color: white;
+}
+
+.originalPanel header span {
+  color: var(--tr-signal-bright);
+}
+
+.originalPanel h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.originalPanel blockquote {
+  flex: 1;
+  margin: 28px 0;
+  color: rgb(255 255 255 / 76%);
+  font-size: 14px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+.originalPanel > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  color: var(--tr-signal-bright);
+}
+
+.originalPanel > div span {
+  display: flex;
+  flex-direction: column;
+}
+
+.originalPanel strong {
+  color: white;
+  font-size: 10px;
+}
+
+.originalPanel small {
+  margin-top: 3px;
+  color: rgb(255 255 255 / 42%);
+  font-size: 8px;
+}
+
+.draftPanel {
+  min-width: 0;
+  padding: 28px 32px 0;
+}
+
+.organizerNote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 26px;
+}
+
+.organizerNote span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: var(--tr-signal-wash);
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.primaryFields,
+.listGrid {
+  display: grid;
+  gap: 18px;
+}
+
+.twoColumns,
+.listGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.twoColumns {
+  display: grid;
+  gap: 14px;
+}
+
+.primaryFields label,
+.listGrid label,
+.tagsField {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.primaryFields input,
+.primaryFields select,
+.primaryFields textarea,
+.listGrid textarea,
+.tagsField input {
+  width: 100%;
+  min-height: 42px;
+  padding: 11px 13px;
+  border: 1px solid var(--tr-line);
+  border-radius: 9px;
+  outline: none;
+  background: var(--tr-surface-raised);
+  color: var(--tr-ink);
+  font: inherit;
+  font-size: 12px;
+}
+
+.primaryFields textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.listGrid {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--tr-line);
+}
+
+.listGrid textarea {
+  min-height: 112px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.listGrid label[data-priority="true"] {
+  padding: 14px;
+  border: 1px solid #e5bd70;
+  border-radius: 12px;
+  background: var(--tr-warning-wash);
+}
+
+.primaryFields input:focus,
+.primaryFields select:focus,
+.primaryFields textarea:focus,
+.listGrid textarea:focus,
+.tagsField input:focus {
+  border-color: var(--tr-signal-deep);
+  box-shadow: 0 0 0 3px rgb(22 201 154 / 11%);
+}
+
+.tagsField {
+  margin-top: 22px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 28px -32px 0;
+  padding: 17px 32px;
+  border-top: 1px solid var(--tr-line);
+}
+
+.actions > span {
+  color: var(--tr-ink-muted);
+  font-size: 10px;
+}
+
+.actions > span[data-dirty="true"] {
+  color: var(--tr-warning);
+}
+
+.actions button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 17px;
+  border: 1px solid var(--tr-graphite);
+  border-radius: 9px;
+  background: var(--tr-graphite);
+  color: white;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.actions > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actions .planningButton {
+  border-color: var(--tr-line-strong);
+  background: var(--tr-surface);
+  color: var(--tr-ink);
+}
+
+.actions button:hover {
+  color: var(--tr-signal-bright);
+}
+
+.actions .planningButton:hover {
+  border-color: var(--tr-signal-deep);
+  color: var(--tr-signal-deep);
+}
+
+@media (max-width: 900px) {
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .originalPanel blockquote {
+    max-height: 260px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .page {
+    padding: 28px 14px 52px;
+  }
+
+  .pageHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .traceStamp {
+    align-self: stretch;
+  }
+
+  .draftPanel {
+    padding: 22px 16px 0;
+  }
+
+  .twoColumns,
+  .listGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+    margin-right: -16px;
+    margin-left: -16px;
+    padding: 16px;
+  }
+
+  .actions > div {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .actions button {
+    justify-content: center;
+  }
+}

@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TicketRoute
 
-## Getting Started
+Centro de control inteligente para convertir solicitudes naturales en trabajo
+técnico claro, estimable, asignable y verificable.
 
-First, run the development server:
+## Stack
+
+- Next.js 16 con App Router, React 19 y TypeScript estricto.
+- Tailwind CSS 4 y módulos CSS para superficies especializadas.
+- Supabase externo para PostgreSQL, Auth, RLS y funciones SQL.
+- Zod, React Hook Form, Vitest y Testing Library.
+
+## Desarrollo local
+
+1. Copia `.env.example` como `.env.local`.
+2. Completa la Project URL, la Publishable key y solo las variables privadas
+   de los módulos que vayas a activar.
+3. Instala y ejecuta:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Las instrucciones acumulativas del bloque actual están en
+`README-CIERRE-INTEGRAL.md`. Las migraciones versionadas se conservan en
+`supabase/migrations`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Verificación integral
 
-## Learn More
+```bash
+npm run verify
+```
 
-To learn more about Next.js, take a look at the following resources:
+Ese comando ejecuta pruebas, TypeScript, ESLint y el build de producción en
+orden, y se detiene en la primera etapa que falle.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estado funcional
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TicketRoute cubre captura manual y dictado con consentimiento, tickets
+estructurados, rangos, asignación, capacidad declarada, guía, ejecución,
+calibración, Council Mode multiproveedor, Inbox, notificaciones Realtime,
+integraciones asíncronas, privacidad, auditoría y recuperación.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las credenciales de proveedores, webhooks, correo operativo y service role no
+se guardan en PostgreSQL ni se exponen con el prefijo `NEXT_PUBLIC_`.

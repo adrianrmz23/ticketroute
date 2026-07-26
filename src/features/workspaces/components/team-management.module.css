@@ -1,0 +1,558 @@
+.page {
+  display: grid;
+  gap: 18px;
+}
+
+.pageHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 7px 0 18px;
+}
+
+.pageHeader > div:first-child > p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 13px;
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.pageHeader > div:first-child > p > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tr-signal);
+  box-shadow: 0 0 0 4px rgb(22 201 154 / 12%);
+}
+
+.pageHeader h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 46px);
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.pageHeader > div:first-child > span {
+  display: block;
+  max-width: 690px;
+  margin-top: 13px;
+  color: var(--tr-ink-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.memberCount {
+  display: flex;
+  min-width: 160px;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1px solid var(--tr-line);
+  border-radius: var(--tr-radius-md);
+  background: var(--tr-surface);
+  color: var(--tr-signal-deep);
+}
+
+.memberCount > span {
+  display: grid;
+  gap: 2px;
+  color: var(--tr-ink-subtle);
+  font-family: var(--font-geist-mono);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.memberCount strong {
+  color: var(--tr-graphite);
+  font-size: 22px;
+  font-weight: 520;
+}
+
+.invitePanel,
+.peoplePanel,
+.pendingPanel {
+  overflow: hidden;
+  padding: clamp(20px, 2.7vw, 30px);
+  border: 1px solid var(--tr-line);
+  border-radius: var(--tr-radius-md);
+  background: var(--tr-surface);
+}
+
+.invitePanel {
+  border-color: rgb(8 125 96 / 24%);
+}
+
+.invitePanel > header,
+.peoplePanel > header,
+.pendingPanel > header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.invitePanel > header > div,
+.peoplePanel > header > div,
+.pendingPanel > header > div {
+  display: grid;
+  gap: 6px;
+}
+
+.invitePanel header span,
+.peoplePanel header span,
+.pendingPanel header span {
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono);
+  font-size: 8px;
+  font-weight: 730;
+  letter-spacing: 0.12em;
+}
+
+.invitePanel h2,
+.peoplePanel h2,
+.pendingPanel h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: -0.035em;
+}
+
+.invitePanel header > small,
+.peoplePanel header > small,
+.pendingPanel header > small {
+  color: var(--tr-ink-subtle);
+  font-family: var(--font-geist-mono);
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.invitePanel > p {
+  max-width: 720px;
+  margin: 13px 0 20px;
+  color: var(--tr-ink-muted);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.inviteForm {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(150px, 0.34fr) auto;
+  align-items: end;
+  gap: 12px;
+}
+
+.inviteForm > div:not(.inviteResult) {
+  display: grid;
+  gap: 7px;
+}
+
+.inviteForm label {
+  font-size: 9px;
+  font-weight: 680;
+}
+
+.inviteForm input,
+.inviteForm select,
+.roleForm select,
+.inviteResult input {
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--tr-line);
+  border-radius: 9px;
+  background: var(--tr-surface-raised);
+  outline: none;
+}
+
+.inviteForm input:focus,
+.inviteForm select:focus,
+.roleForm select:focus {
+  border-color: var(--tr-signal-deep);
+  box-shadow: 0 0 0 3px rgb(22 201 154 / 10%);
+}
+
+.inviteForm > button,
+.roleForm button,
+.pendingRow form button,
+.inviteResult button {
+  display: inline-flex;
+  min-height: 42px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 14px;
+  border-radius: 9px;
+  background: var(--tr-graphite);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.inviteForm button:disabled,
+.roleForm button:disabled,
+.pendingRow form button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.inviteResult {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 8px;
+}
+
+.inviteResult > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.inviteResult input {
+  min-width: 0;
+  border-radius: 9px 0 0 9px;
+  background: var(--tr-canvas);
+  font-family: var(--font-geist-mono);
+  font-size: 9px;
+}
+
+.inviteResult button {
+  border-radius: 0 9px 9px 0;
+  background: var(--tr-signal-deep);
+}
+
+.errorMessage,
+.successMessage {
+  display: block;
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.errorMessage {
+  color: #a54233;
+}
+
+.successMessage {
+  color: var(--tr-signal-deep);
+}
+
+.memberList,
+.pendingList {
+  display: grid;
+  margin-top: 20px;
+  border-top: 1px solid var(--tr-line);
+}
+
+.memberRow {
+  display: grid;
+  min-height: 76px;
+  grid-template-columns: auto minmax(170px, 1fr) minmax(110px, 0.35fr) auto auto;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--tr-line);
+}
+
+.memberRow:last-child {
+  border-bottom: 0;
+}
+
+.avatar {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--tr-line);
+  border-radius: 10px;
+  background: var(--tr-signal-wash);
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono);
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.memberIdentity {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.memberIdentity strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.memberIdentity strong small {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: var(--tr-signal-wash);
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono);
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+.memberIdentity > span,
+.joinedAt {
+  overflow: hidden;
+  color: var(--tr-ink-subtle);
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.joinedAt {
+  font-family: var(--font-geist-mono);
+}
+
+.roleForm {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) auto;
+  align-items: center;
+  gap: 6px;
+}
+
+.roleForm select {
+  min-height: 36px;
+  font-size: 9px;
+}
+
+.roleForm button {
+  min-height: 36px;
+  padding: 0 10px;
+  background: var(--tr-surface-raised);
+  color: var(--tr-ink);
+  border: 1px solid var(--tr-line);
+}
+
+.roleForm > small {
+  grid-column: 1 / -1;
+}
+
+.roleBadge {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 9px;
+  border: 1px solid var(--tr-line);
+  border-radius: 999px;
+  color: var(--tr-ink-muted);
+  font-family: var(--font-geist-mono);
+  font-size: 8px;
+}
+
+.removeForm {
+  position: relative;
+}
+
+.removeForm > button {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  place-items: center;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--tr-ink-subtle);
+}
+
+.removeForm > button:hover {
+  background: var(--tr-danger-wash);
+  color: var(--tr-danger);
+}
+
+.removeForm > small {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  width: 190px;
+  padding: 6px;
+  border-radius: 6px;
+  background: var(--tr-surface-raised);
+  box-shadow: 0 6px 18px rgb(17 23 19 / 9%);
+  z-index: 2;
+}
+
+.pendingRow {
+  display: grid;
+  min-height: 66px;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--tr-line);
+}
+
+.pendingRow:last-child {
+  border-bottom: 0;
+}
+
+.pendingRow > span:first-child {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--tr-warning-wash);
+  color: #9a6510;
+}
+
+.pendingRow > div {
+  display: grid;
+  gap: 4px;
+}
+
+.pendingRow strong {
+  font-size: 10px;
+}
+
+.pendingRow small {
+  color: var(--tr-ink-subtle);
+  font-size: 8px;
+}
+
+.pendingBadge {
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: var(--tr-warning-wash);
+  color: #8d5d12;
+  font-family: var(--font-geist-mono);
+  font-size: 7px;
+  text-transform: uppercase;
+}
+
+.pendingRow form {
+  position: relative;
+}
+
+.pendingRow form button {
+  min-height: 32px;
+  padding: 0 9px;
+  background: transparent;
+  color: var(--tr-danger);
+  border: 1px solid rgb(216 97 77 / 24%);
+}
+
+.pendingRow form > small {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  width: 170px;
+}
+
+.emptyState {
+  display: flex;
+  min-height: 90px;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 20px;
+  border: 1px dashed var(--tr-line-strong);
+  border-radius: var(--tr-radius-sm);
+  color: var(--tr-signal-deep);
+}
+
+.emptyState > span {
+  display: grid;
+  gap: 3px;
+}
+
+.emptyState strong {
+  color: var(--tr-ink);
+  font-size: 10px;
+}
+
+.emptyState small {
+  color: var(--tr-ink-subtle);
+  font-size: 8px;
+}
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .inviteForm {
+    grid-template-columns: 1fr 180px;
+  }
+
+  .inviteForm > button {
+    grid-column: 1 / -1;
+  }
+
+  .memberRow {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    padding: 14px 0;
+  }
+
+  .joinedAt {
+    display: none;
+  }
+
+  .roleForm,
+  .roleBadge {
+    grid-column: 2;
+  }
+
+  .removeForm {
+    grid-row: 1;
+    grid-column: 3;
+  }
+}
+
+@media (max-width: 600px) {
+  .pageHeader {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .memberCount {
+    min-width: 0;
+  }
+
+  .inviteForm {
+    grid-template-columns: 1fr;
+  }
+
+  .inviteForm > button {
+    grid-column: auto;
+  }
+
+  .memberRow {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .roleForm {
+    grid-column: 1 / -1;
+  }
+
+  .roleBadge {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+
+  .pendingRow {
+    grid-template-columns: auto 1fr auto;
+    padding: 12px 0;
+  }
+
+  .pendingBadge {
+    display: none;
+  }
+
+  .pendingRow form {
+    grid-column: 2 / -1;
+    justify-self: start;
+  }
+}

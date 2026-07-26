@@ -1,0 +1,141 @@
+.page {
+  width: min(100%, 1340px);
+  margin: 0 auto;
+  padding: 52px 32px 72px;
+}
+
+.page > header p {
+  margin: 0 0 10px;
+  color: var(--tr-signal-deep);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.page > header h1 {
+  margin: 0;
+  color: var(--tr-ink);
+  font-size: 52px;
+  font-weight: 560;
+  letter-spacing: -0.055em;
+}
+
+.page > header span {
+  display: block;
+  margin-top: 12px;
+  color: var(--tr-ink-muted);
+  font-size: 13px;
+}
+
+.list {
+  margin-top: 30px;
+  overflow: hidden;
+  border: 1px solid var(--tr-line);
+  border-radius: var(--tr-radius-lg);
+  background: var(--tr-surface);
+}
+
+.list > a {
+  display: grid;
+  min-height: 82px;
+  grid-template-columns: 40px minmax(0, 1fr) 80px 130px 18px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 22px;
+  border-bottom: 1px solid var(--tr-line);
+  color: var(--tr-ink);
+  text-decoration: none;
+}
+
+.list > a:hover {
+  background: var(--tr-signal-wash);
+}
+
+.list > a > span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--tr-line);
+  border-radius: 10px;
+  color: var(--tr-signal-deep);
+}
+
+.list a div {
+  min-width: 0;
+}
+
+.list a strong,
+.list a small {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list a strong {
+  font-size: 13px;
+}
+
+.list a small {
+  margin-top: 6px;
+  color: var(--tr-ink-subtle);
+  font-size: 9px;
+}
+
+.list a em,
+.list a b {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 8px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.list a b {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: var(--tr-warning-wash);
+  color: #8c5f0a;
+  text-align: center;
+}
+
+.empty {
+  display: grid;
+  min-height: 330px;
+  place-content: center;
+  justify-items: center;
+  color: var(--tr-ink-muted);
+}
+
+.empty strong {
+  margin-top: 14px;
+  color: var(--tr-ink);
+}
+
+.empty span {
+  margin-top: 7px;
+  font-size: 11px;
+}
+
+.empty a {
+  margin-top: 18px;
+  color: var(--tr-signal-deep);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 30px 14px 52px;
+  }
+
+  .list > a {
+    grid-template-columns: 40px minmax(0, 1fr) 18px;
+  }
+
+  .list a em,
+  .list a b {
+    display: none;
+  }
+}

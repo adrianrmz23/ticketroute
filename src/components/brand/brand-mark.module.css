@@ -1,0 +1,79 @@
+.brand,
+.compactBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.symbol {
+  position: relative;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  grid-template-columns: repeat(4, 3px);
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  overflow: hidden;
+  border: 1px solid rgb(59 232 184 / 22%);
+  border-radius: 10px;
+  background: #202a24;
+}
+
+.symbol::after {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--tr-signal-bright);
+  box-shadow: 0 0 0 3px rgb(59 232 184 / 11%);
+  content: "";
+}
+
+.symbol span {
+  width: 3px;
+  border-radius: 99px;
+  background: var(--tr-signal-bright);
+}
+
+.symbol span:nth-child(1) {
+  height: 8px;
+}
+
+.symbol span:nth-child(2) {
+  height: 17px;
+}
+
+.symbol span:nth-child(3) {
+  height: 12px;
+}
+
+.symbol span:nth-child(4) {
+  height: 22px;
+}
+
+.wordmark {
+  overflow: hidden;
+  color: #f8faf8;
+  font-size: 17px;
+  font-weight: 690;
+  letter-spacing: -0.045em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.wordmark span {
+  color: var(--tr-signal-bright);
+}
+
+.ink .wordmark {
+  color: var(--tr-ink);
+}
+
+.ink .wordmark span {
+  color: var(--tr-signal-deep);
+}
