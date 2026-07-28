@@ -141,12 +141,11 @@
 
 .primaryGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(270px, 0.7fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
 }
 
 .captureSurface,
-.foundationPanel,
 .operationTable {
   overflow: hidden;
   border: 1px solid var(--tr-line);
@@ -299,89 +298,6 @@
   border-radius: 8px;
   background: var(--tr-graphite);
   color: var(--tr-signal-bright);
-}
-
-.foundationPanel {
-  padding: 24px;
-  background: var(--tr-graphite-soft);
-  color: #ffffff;
-}
-
-.foundationPanel .sectionHeading span {
-  color: var(--tr-signal-bright);
-}
-
-.foundationPanel .sectionHeading h2 {
-  color: #ffffff;
-}
-
-.foundationPanel .sectionHeading > svg {
-  color: var(--tr-signal-bright);
-}
-
-.foundationPanel ul {
-  display: grid;
-  gap: 2px;
-  margin: 22px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.foundationPanel li {
-  display: grid;
-  min-height: 42px;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid rgb(255 255 255 / 8%);
-  color: rgb(249 251 249 / 78%);
-  font-size: 11px;
-}
-
-.foundationPanel li > span {
-  display: grid;
-  width: 20px;
-  height: 20px;
-  place-items: center;
-  border-radius: 50%;
-  background: rgb(59 232 184 / 11%);
-  color: var(--tr-signal-bright);
-}
-
-.foundationPanel li small {
-  color: var(--tr-signal-bright);
-  font-family: var(--font-geist-mono);
-  font-size: 7px;
-  letter-spacing: 0.08em;
-}
-
-.foundationNote {
-  padding: 14px;
-  border: 1px solid rgb(255 255 255 / 9%);
-  border-radius: var(--tr-radius-sm);
-  background: rgb(255 255 255 / 4%);
-}
-
-.foundationNote span {
-  color: rgb(246 250 247 / 38%);
-  font-family: var(--font-geist-mono);
-  font-size: 8px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.foundationNote strong {
-  display: block;
-  margin-top: 7px;
-  font-size: 12px;
-  font-weight: 620;
-}
-
-.foundationNote p {
-  margin: 6px 0 0;
-  color: rgb(246 250 247 / 48%);
-  font-size: 10px;
-  line-height: 1.5;
 }
 
 .operationTable {

@@ -1,11 +1,9 @@
 import {
   ArrowUpRight,
-  Check,
   CircleDashed,
   Command,
   CornerDownLeft,
   Route,
-  ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -18,53 +16,6 @@ import { ticketStatusLabels } from "@/domain/tickets/ticket";
 import { createSupabaseServerClient } from "@/infrastructure/supabase/server";
 
 import styles from "./command-center.module.css";
-
-const foundationItems = [
-  "Tokens visuales",
-  "Shell responsive",
-  "Navegación accesible",
-  "Paleta global",
-  "Landing pública",
-  "Demo guiada",
-  "Clientes Supabase",
-  "RLS multiworkspace",
-  "Autenticación SSR",
-  "Rutas privadas",
-  "Workspaces activos",
-  "Roles verificables",
-  "Invitaciones seguras",
-  "Capture Hub persistente",
-  "Consentimiento de voz",
-  "Organizer explicable",
-  "Ticket Studio",
-  "Motor por rangos",
-  "Planning Lab",
-  "Assignment Studio",
-  "Escenarios de asignación",
-  "Decisiones sin vigilancia",
-  "Perfiles de capacidad",
-  "Señales declaradas",
-  "Ownership y aprendizaje",
-  "Planning Guide",
-  "Pasos verificables",
-  "Fuentes y responsables",
-  "Execution Board",
-  "Estados declarados",
-  "Evidencia y bloqueos",
-  "Dependencias y riesgos visibles",
-  "Actualización Realtime",
-  "Calibration Lab",
-  "Aprendizaje confirmado",
-  "Adaptadores multiproveedor",
-  "Council Mode trazable",
-  "Notificaciones por eventos",
-  "Integraciones asíncronas",
-  "Privacidad y exportación",
-  "Auditoría administrativa",
-  "Cola con reintentos",
-  "Recuperación de errores",
-  "Demo de ciclo completo",
-];
 
 export default async function CommandCenterPage() {
   const { currentWorkspace } = await getWorkspaceContext();
@@ -301,37 +252,6 @@ export default async function CommandCenterPage() {
             </div>
           </Link>
         </section>
-
-        <aside className={styles.foundationPanel}>
-          <div className={styles.sectionHeading}>
-            <div>
-              <span>BASE / ESTADO</span>
-              <h2>Base del producto</h2>
-            </div>
-            <ShieldCheck size={20} aria-hidden="true" />
-          </div>
-
-          <ul>
-            {foundationItems.map((item) => (
-              <li key={item}>
-                <span>
-                  <Check size={12} strokeWidth={2.4} aria-hidden="true" />
-                </span>
-                {item}
-                <small>LISTO</small>
-              </li>
-            ))}
-          </ul>
-
-          <div className={styles.foundationNote}>
-            <span>Estado del recorrido</span>
-            <strong>Entrega integral preparada</strong>
-            <p>
-              El sistema conserva decisiones, ejecución, evidencia y
-              aprendizaje con límites visibles y sin vigilancia individual.
-            </p>
-          </div>
-        </aside>
       </div>
 
       <section className={styles.operationTable}>
