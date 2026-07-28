@@ -12,7 +12,7 @@ Captura · Estructuración · Planeación · Asignación · Ejecución · Aprend
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Tests](https://img.shields.io/badge/tests-Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 
-[Demo en línea](https://REEMPLAZAR-CON-TU-DOMINIO.vercel.app) · [Repositorio](https://github.com/REEMPLAZAR-USUARIO/REEMPLAZAR-REPOSITORIO)
+[Demo en línea](https://ticketroute.vercel.app/) · [Repositorio](https://github.com/adrianrmz23/ticketroute/)
 
 </div>
 
