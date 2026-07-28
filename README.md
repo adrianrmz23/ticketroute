@@ -271,8 +271,8 @@ TicketRoute aplica una estrategia de seguridad por capas:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/REEMPLAZAR-USUARIO/REEMPLAZAR-REPOSITORIO.git
-cd REEMPLAZAR-REPOSITORIO
+git clone https://github.com/adrianrmz23/ticketroute/
+cd ticketroute
 ```
 
 ### 2. Instalar dependencias
